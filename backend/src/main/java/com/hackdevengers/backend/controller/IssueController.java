@@ -20,7 +20,7 @@ import com.hackdevengers.backend.service.IssueService;
 
 @RestController
 @RequestMapping("/api/issues")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "*")
 public class IssueController {
 
     private final IssueService issueService;
