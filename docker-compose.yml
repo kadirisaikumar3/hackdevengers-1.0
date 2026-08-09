@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: civicai-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: civicai
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: hackdevengers
+    ports:
+      - "5433:5432"
+    volumes:
+      - civicai_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  civicai_postgres_data:
